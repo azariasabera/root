@@ -23,7 +23,7 @@ function App() {
       },
       body: JSON.stringify({ name, author, pages })
     });
-    const data = await response.json();
+    const data = await response.text();
     console.log(data)
     //setBooks([...books, data]);
   }
