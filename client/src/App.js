@@ -12,7 +12,8 @@ function App() {
     fetchData();
   });*/
 
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
     const name = document.getElementById('name').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <h1>books</h1>
-      <form action="/api/book" method="POST">
+      <form action="" method="POST" onSubmit={onSubmit}>
         <input type="text" id="name" name="name" placeholder="name" />
         <input type="text" id="author" name="author" placeholder="author" />
         <input type="number" id="pages" name="pages" placeholder="pages" />
