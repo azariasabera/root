@@ -11,7 +11,7 @@ const BookForm = () => {
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
     
-    const response = await fetch('/api/book', {
+    const response = await fetch('api/book', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
