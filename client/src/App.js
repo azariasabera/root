@@ -7,7 +7,7 @@ function App() {
 
   // Function to fetch books from API
   const fetchBooks = async () => {
-    const response = await fetch('/api/books');
+    const response = await fetch('/api/book');
     const data = await response.json();
     setBooks(data); // Update state with fetched books
   };
