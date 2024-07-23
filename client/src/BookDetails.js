@@ -16,7 +16,7 @@ const BookDetails = () => {
     fetchBook();
   }, [bookName]);
 
-  if (!book) return <p>Loading...</p>;
+  if (!book) return <h1>404: This is not the webpage you are looking for</h1>;
 
   return (
     <div>
