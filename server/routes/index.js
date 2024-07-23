@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+// to see files in mongosh, i use: use testdb then use books then db.books.find()
+
 // MongoDB setup -------------------------------------
 const mongoose = require('mongoose');
 const Books = require("../models/Books");
@@ -25,7 +27,11 @@ router.post('/api/book', (req, res)=>{
         pages : req.body.pages
     });
     newBook.save();
-    res.send('Book added');
+    res.json({
+        name: req.body.name,
+        author: req.body.author,
+        pages: req.body.pages
+    })
 });
 
 module.exports = router;
