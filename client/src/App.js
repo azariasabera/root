@@ -31,10 +31,12 @@ function App() {
   return (
     <div className="App">
       <h1>books</h1>
-      <input type="text" placeholder="book name" name="name" id='name'/>
-      <input type="text" placeholder="author" name="author" id='author'/>
-      <input type="number" placeholder="pages" name="pages" id='pages'/>
-      <button type="submit" onClick={onSubmit} id='submit'>Add book</button>
+      <form action="/api/book" method="POST">
+        <input type="text" id="name" name="name" placeholder="name" />
+        <input type="text" id="author" name="author" placeholder="author" />
+        <input type="number" id="pages" name="pages" placeholder="pages" />
+        <button type="submit" id="submit">Submit</button>
+      </form>
     </div>
   );
 }
