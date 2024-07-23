@@ -21,6 +21,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/api/book', (req, res)=>{
+  try {
     let newBook = new Books({
         name : req.body.name,
         author : req.body.author,
@@ -32,6 +33,9 @@ router.post('/api/book', (req, res)=>{
         author: req.body.author,
         pages: req.body.pages
     })
+  } catch (error) {
+    res.status(500).send(`Error occured: ${error}`)
+  }
 });
 
 router.get('/api/book', async (req, res)=>{
