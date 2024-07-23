@@ -39,4 +39,8 @@ router.get('/api/book', async (req, res)=>{
     res.json(books);
 });
 
+router.get('/api/book/:name', async (req, res)=>{
+    let book = await Books.findOne({name: req.params.name});
+    res.json(book);
+});
 module.exports = router;
