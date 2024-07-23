@@ -34,4 +34,9 @@ router.post('/api/book', (req, res)=>{
     })
 });
 
+router.get('/api/books', async (req, res)=>{
+    let books = await Books.find();
+    res.json(books);
+});
+
 module.exports = router;
