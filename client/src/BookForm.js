@@ -29,7 +29,7 @@ const BookForm = () => {
       <input id="name" type="text" placeholder="Book Name" />
       <input id="author" type="text" placeholder="Author" />
       <input id="pages" type="number" placeholder="Number of Pages" />
-      <button type="submit">Submit</button>
+      <button type="submit" id='submit'>Submit</button>
     </form>
   );
 };
