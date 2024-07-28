@@ -6,7 +6,7 @@ var router = express.Router();
 // MongoDB setup -------------------------------------
 const mongoose = require('mongoose');
 const Books = require("../models/Books");
-const mongoDB = 'mongodb://127.0.0.1:27017/testdb';
+const mongoDB = 'mongodb://127.0.0.1:27017/testd';
 mongoose.connect(mongoDB)
         .then(() => console.log("MongoDB is connected!"))
         .catch((error) => console.log(`Error has occured: ${error}`));
